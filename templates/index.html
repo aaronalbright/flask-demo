@@ -1,0 +1,26 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Gamespot GOTY Winners{% endblock %}
+
+{% block head %}
+{{ super() }}
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+{% block page_content %}
+<h1>Gamespot Game of the Year Winners</h1>
+
+<ul>
+{% for game in games %}
+  <li><a href="/winners/{{ game }}">{{ game }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+</div> <!-- close container -->
+
+{% endblock %}
+</html>
